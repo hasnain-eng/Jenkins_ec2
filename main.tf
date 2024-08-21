@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_instance" "testserver" {
   ami           = "ami-04df9ee4d3dfde202"
-  instance_type = "t2.micro"
+  instance_type = "t2.small"
   key_name      = aws_key_pair.keypair.key_name
   tags = {
   Name          = "Made via terraform"
