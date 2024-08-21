@@ -27,7 +27,7 @@ pipeline {
         }
         stage('terra-plan') {
             steps {
-                sh 'az login'
+                
                 sh 'terraform plan'
             }
         }
