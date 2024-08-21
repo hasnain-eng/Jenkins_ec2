@@ -5,10 +5,10 @@ provider "aws" {
   secret_key = "1jP8JsF9Hz8LZiLjw2lEfQsaQj2XV0pQXeHrHkTJ"
 }
 
-resource "aws_instance" "foo" {
-  ami           = "ami-05fa00d4c63e32376" # us-west-2
+resource "aws_instance" "testserver" {
+  ami           = "ami-04df9ee4d3dfde202"
   instance_type = "t2.micro"
   tags = {
-      Name = "TF-Instance"
-  }
+  Name          = "Made via terraform"
+    }
 }
