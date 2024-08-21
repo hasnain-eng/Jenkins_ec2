@@ -11,6 +11,7 @@ resource "aws_instance" "testserver" {
   Name          = "Made via terraform"
   vpc_security_group_ids = "${aws_security_group.terraform_security_group.id}"
   }
+}
 
 resource "aws_key_pair" "keypair" {
   key_name   = "test-key"
