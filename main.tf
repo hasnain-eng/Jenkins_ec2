@@ -13,10 +13,10 @@ resource "aws_instance" "testserver" {
   }
 }
 
-resource "aws_key_pair" "keypair" {
-  key_name   = "test-key"
-  public_key = file("${path.module}/public key")
-}
+#resource "aws_key_pair" "keypair" {
+#  key_name   = "test-key"
+#  public_key = file("${path.module}/public key")
+#}
 
 resource "aws_security_group" "terraform_security_group" {
   name        = "my-sg"
