@@ -42,3 +42,17 @@ resource "aws_security_group" "terraform_security_group" {
     ipv6_cidr_blocks = ["::/0"]
   }
 }
+
+#Create aws load balancer
+
+resource "aws_lb" "app_lb" {
+  name               = "app_lb"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = [aws_security_group.terraform_security_group.id]
+  subnets            = ["subnet-0b41a4de29656edb1", "subnet-09d8da5cdbcb8aad0"]
+
+  enable_deletion_protection = false
+}
+
+
